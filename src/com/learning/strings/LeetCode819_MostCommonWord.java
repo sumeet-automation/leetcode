@@ -9,20 +9,26 @@ import static java.util.stream.Collectors.groupingBy;
 public class LeetCode819_MostCommonWord {
 
     public static void main(String[] args) {
-        new LeetCode819_MostCommonWord().mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit",new String[]{"hit"});
+        System.out.println(new LeetCode819_MostCommonWord().mostCommonWord("a.",
+                new String[]{}));
     }
+
     public static String mostCommonWord(String paragraph, String[] banned) {
         var countMap = Arrays.stream(paragraph.toLowerCase().split("[\\p{Punct}\\s]+"))
-                .filter(word -> {
-                    for (String x : banned) {
-                        if(!x.equalsIgnoreCase(word))
-                            return true;
-                        else return false;
-                    }
-                    return false;
-                })
                 .collect(groupingBy(identity(), counting()));
-        System.out.println(countMap);
-        return "";
+
+        for (String word : banned) {
+            countMap.remove(word);
+        }
+
+        long max = 0;
+        String output = "";
+        for (String word : countMap.keySet()) {
+            if (countMap.get(word) > max) {
+                max = countMap.get(word);
+                output = word;
+            }
+        }
+        return output;
     }
 }
