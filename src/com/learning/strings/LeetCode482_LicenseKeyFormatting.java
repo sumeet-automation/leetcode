@@ -9,17 +9,15 @@ public class LeetCode482_LicenseKeyFormatting {
     Output: "5F3Z-2E9W"
      */
     public static void main(String[] args) {
-        System.out.println(licenseKeyFormatting("2-4A0r7-4k", 4));
+        System.out.println(licenseKeyFormatting("2-5g-3-J", 2));
     }
     public static String licenseKeyFormatting(String s, int k) {
-        String[] array = s.split("-");
+        StringBuilder reverse = new StringBuilder(s.replaceAll("-","").toUpperCase()).reverse();
         StringJoiner output = new StringJoiner("-");
-        output.add(array[0]);
-        s=s.replaceAll("-","").substring(array[0].length()).toUpperCase();
-        for (int i = 0; i < s.length(); i=i+k) {
-            int lastLength = i + k > s.length() ? s.length() : i + k;
-            output.add(s.substring(i, lastLength));
+        for (int i = 0; i < reverse.length(); i=i+k) {
+            int lastLength = Math.min(i + k, reverse.length());
+            output.add(reverse.substring(i, lastLength));
         }
-        return output.toString();
+        return new StringBuilder(output.toString()).reverse().toString();
     }
 }

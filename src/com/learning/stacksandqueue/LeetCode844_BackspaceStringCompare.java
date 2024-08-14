@@ -23,7 +23,6 @@ public class LeetCode844_BackspaceStringCompare {
             } else
                 s2.push(letter);
         }
-        System.out.println(s1);
         return s1.equals(s2);
     }
 }
