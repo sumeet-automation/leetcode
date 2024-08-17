@@ -7,7 +7,7 @@ public class LeetCode1935_BrokenKeyboard {
         System.out.println(canBeTypedWords("leet code", ""));
     }
     public static int canBeTypedWords(String text, String brokenLetters) {
-        if(brokenLetters.length()==0)
+        if(brokenLetters.isEmpty())
             return text.split(" ").length;
         String[] brokenLetterArray = brokenLetters.split("");
         int count = 0;
