@@ -14,8 +14,7 @@ public class LeetCode2109_AddSpacesToString {
         StringBuilder sb = new StringBuilder(s);
         int count=0;
         for (int space : spaces) {
-            sb = sb.insert(space+count,' ');
-            count++;
+            sb.insert(space + count++, ' ');
         }
         return sb.toString();
     }
