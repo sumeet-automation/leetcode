@@ -1,4 +1,4 @@
-package com.learning.integer;
+package com.learning.maths;
 
 /*
 Reverse Integer

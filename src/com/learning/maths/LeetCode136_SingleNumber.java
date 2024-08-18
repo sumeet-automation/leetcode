@@ -1,6 +1,4 @@
-package com.learning.integer;
-
-import java.util.Arrays;
+package com.learning.maths;
 
 public class LeetCode136_SingleNumber {
 
