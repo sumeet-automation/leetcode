@@ -9,7 +9,6 @@ public class LeetCode1190_ReverseStringsBetweenTwoParantheses {
         reverseParentheses("(ba)cd");
         reverseParentheses("(u(love)i)");
     }
-
     public static String reverseParentheses(String s) {
         if (!s.contains("(")) return s;
         int openingParanthesis = s.lastIndexOf("(");

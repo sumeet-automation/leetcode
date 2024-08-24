@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 public class WIP_LeetCode77_Combinations {
 
     public static void main(String[] args) {
-        System.out.println(combine(10, 2));
+        System.out.println(combine(10, 3));
     }
 
     public static List<List<Integer>> combine(int n, int k) {
@@ -18,7 +18,7 @@ public class WIP_LeetCode77_Combinations {
     }
 
     public static void perm(int[] nums, List<Integer> perm, List<List<Integer>> currAns, int index, int uptoIndex) {
-        if (perm.size() == uptoIndex)
+        //if (perm.size() == uptoIndex)
             currAns.add(new ArrayList<>(perm));
         for (int i = index; i < nums.length; i++) {
             perm.add(nums[i]);

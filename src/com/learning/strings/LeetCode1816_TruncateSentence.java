@@ -1,7 +1,6 @@
 package com.learning.strings;
 
 import java.util.StringJoiner;
-
 public class LeetCode1816_TruncateSentence {
     public String truncateSentence(String s, int k) {
         String[] words = s.split(" ");

@@ -11,19 +11,18 @@ public class LeetCode46_Permutations {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> output = new ArrayList<>();
-        permute(nums, new ArrayList<>(), output,0, nums.length, new boolean[nums.length] );
+        permute(nums, new ArrayList<>(), output, 0, nums.length, new boolean[nums.length]);
         System.out.println(output);
         return output;
     }
 
     public void permute(int[] nums, List<Integer> perm, List<List<Integer>> curr, int index, int uptoIndex, boolean[] visited) {
-        if(perm.size()==uptoIndex)
-        curr.add(new ArrayList<>(perm));
+        if (perm.size() == uptoIndex) curr.add(new ArrayList<>(perm));
         for (int i = 0; i < nums.length; i++) {
             if (visited[i]) continue;
             visited[i] = true;
             perm.add(nums[i]);
-            permute(nums,perm,curr,i+1,uptoIndex,visited);
+            permute(nums, perm, curr, i + 1, uptoIndex, visited);
             perm.removeLast();
             visited[i] = false;
         }
