@@ -1,5 +1,6 @@
 package com.learning.strings;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +15,8 @@ public class LeetCode451_SortCharactersByFrequency {
         }
         record Sort(String word, int frequency) { }
 
-        return countMap.keySet().stream().map(x -> new Sort(x, countMap.get(x))).sorted(Comparator.comparing(Sort::frequency).reversed()).map(x -> x.word.repeat(x.frequency)).collect(joining(""));
+        return countMap.keySet().stream().map(x -> new Sort(x, countMap.get(x))).sorted(Comparator.comparing(Sort::frequency)
+                .reversed()).map(x -> x.word.repeat(x.frequency)).collect(joining(""));
     }
+
 }
