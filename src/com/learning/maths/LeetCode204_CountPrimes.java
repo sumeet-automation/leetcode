@@ -10,8 +10,12 @@ public class LeetCode204_CountPrimes {
     public static void main(String[] args) {
         LeetCode204_CountPrimes solution = new LeetCode204_CountPrimes();
         //System.out.println(solution.countPrimes(5220));
-        System.out.println(solution.countPrimes(4));
-    }
+        //System.out.println(solution.countPrimes(4));
+        //System.out.println(solution.findCompement(2));
+        int[][] nums = new int[1][2];
+        nums[0] = new int[]{1,1};
+     }
+
 
     //Sieve of Erathosthenes algorightm
     public int countPrimes(int n) {
