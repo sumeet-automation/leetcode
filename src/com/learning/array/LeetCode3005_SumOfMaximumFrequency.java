@@ -1,4 +1,4 @@
-package com.learning.arrays;
+package com.learning.array;
 
 import java.util.Arrays;
 public class LeetCode3005_SumOfMaximumFrequency {
