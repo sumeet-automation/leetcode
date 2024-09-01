@@ -1,16 +1,22 @@
 package com.learning.maths;
-
-import java.util.stream.IntStream;
-
 public class LeetCode507_PerfectNumber {
 
     public static void main(String[] args) {
-        System.out.println(new LeetCode507_PerfectNumber().checkPerfectNumber(2372));
+        System.out.println(new LeetCode507_PerfectNumber().checkPerfectNumber(120));
     }
     public boolean checkPerfectNumber(int num) {
-        int divisorSum = IntStream.rangeClosed(1, (num / 2) + 1)
-                .filter(x -> num % x == 0).sum();
-        System.out.println(divisorSum);
-        return divisorSum==1 || divisorSum >num?false : divisorSum==0;
+        if (num == 1) {
+            return false;
+        }
+        int s = 1;
+        for (int i = 2; i * i <= num; i++) {
+            if (num % i == 0) {
+                s += i;
+                if (i != num / i) {
+                    s += num / i;
+                }
+            }
+        }
+        return s == num;
     }
 }
