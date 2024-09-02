@@ -1,4 +1,5 @@
 package com.learning.maths;
+
 public class LeetCode3099_HarshadNumber {
 
     public static void main(String[] args) {
