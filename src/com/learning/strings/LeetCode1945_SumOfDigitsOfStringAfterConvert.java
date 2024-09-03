@@ -11,18 +11,18 @@ public class LeetCode1945_SumOfDigitsOfStringAfterConvert {
     }
     public int getLucky(String s, int k) {
         StringBuilder sb = new StringBuilder();
-        for (char c : s.toCharArray()) {
-            sb.append(c - 'a' + 1);
+        for(char c:s.toCharArray()){
+            sb.append(c-'a'+1);
         }
-        s = sb.toString();
-        while (k-- > 0) {
-            int t = 0;
-            for (char c : s.toCharArray()) {
-                t += c - '0';
+        String t = sb.toString();
+        for (int i = 0; i < k; i++) {
+            int runningSum=0;
+            for (char c:t.toCharArray()) {
+                runningSum += c- '0';
             }
-            s = String.valueOf(t);
+            t = String.valueOf(runningSum);
         }
-        return Integer.parseInt(s);
+        return Integer.parseInt(t);
     }
 
 

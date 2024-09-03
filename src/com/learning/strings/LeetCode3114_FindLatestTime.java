@@ -1,6 +1,12 @@
 package com.learning.strings;
 
 public class LeetCode3114_FindLatestTime {
+
+    public static void main(String[] args) {
+        LeetCode3114_FindLatestTime solution = new LeetCode3114_FindLatestTime();
+    }
+
+
     public String findLatestTime(String s) {
         char[] chars = s.toCharArray();
         if (chars[0] == '?') {
