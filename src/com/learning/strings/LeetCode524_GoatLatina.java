@@ -25,7 +25,6 @@ For example, the first word gets "a" added to the end, the second word gets "aa"
         int trace = 1;
         StringJoiner sb = new StringJoiner(" ");
         for (String word : sentence.split(" ")) {
-            System.out.println(word);
             String first = String.valueOf(word.charAt(0));
             StringBuilder stringBuilder = new StringBuilder();
             if (!vowels.contains(first)) {
