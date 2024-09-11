@@ -1,5 +1,7 @@
 package com.learning.linkedlist;
 
+import com.learning.linkedlist.predefine.ListNode;
+
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
