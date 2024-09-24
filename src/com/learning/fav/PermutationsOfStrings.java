@@ -30,10 +30,15 @@ public class PermutationsOfStrings {
     }
 
     private static void combine(String input, String perm, List<String> list) {
-        list.add(perm);
+        if(isPalindromic(perm))
+            list.add(perm);
         for (int i = 0; i < input.length(); i++) {
             String temp = input.substring(i + 1);
             combine(temp, perm + input.charAt(i), list);
         }
+    }
+
+    private static boolean isPalindromic(String perm) {
+        return new StringBuilder(perm).reverse().toString().equals(perm);
     }
 }

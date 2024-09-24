@@ -1,6 +1,6 @@
-package com.learning.linkedlist;
+package com.learning.linkedlistandtree;
 
-import com.learning.linkedlist.predefine.TreeNode;
+import com.learning.linkedlistandtree.predefine.TreeNode;
 
 public class LeetCode404_SumOFLeftLeaves {
 

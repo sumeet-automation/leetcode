@@ -1,6 +1,6 @@
-package com.learning.linkedlist;
+package com.learning.linkedlistandtree;
 
-import com.learning.linkedlist.predefine.ListNode;
+import com.learning.linkedlistandtree.predefine.ListNode;
 
 public class LeetCode2807_InsertGreatestCommonDivisorInLinkedList {
     public ListNode insertGreatestCommonDivisors(ListNode head) {

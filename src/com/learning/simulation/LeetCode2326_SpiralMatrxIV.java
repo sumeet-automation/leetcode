@@ -1,6 +1,6 @@
 package com.learning.simulation;
 
-import com.learning.linkedlist.predefine.ListNode;
+import com.learning.linkedlistandtree.predefine.ListNode;
 
 import java.util.Arrays;
 

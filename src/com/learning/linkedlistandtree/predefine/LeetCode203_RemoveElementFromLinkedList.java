@@ -1,4 +1,4 @@
-package com.learning.linkedlist.predefine;
+package com.learning.linkedlistandtree.predefine;
 
 public class LeetCode203_RemoveElementFromLinkedList {
 

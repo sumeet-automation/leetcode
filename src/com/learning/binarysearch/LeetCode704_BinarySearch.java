@@ -7,19 +7,19 @@ public class LeetCode704_BinarySearch {
         System.out.println(solution.search(new int[]{-5, -3, 0, 3, 5, 9, 11, 13, 15}, 11));
     }
 
-    public int search(int[] nums, int target) {
-        int left = 0, right = nums.length - 1;
-        int index = (left + right) / 2;
+    private boolean search( int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
         while (left <= right) {
-            if (nums[index] == target) {
-                return index;
-            } else if (nums[index] < target) {
-                left = index + 1;
-            } else if (nums[index] > target) {
-                right = index - 1;
+            int mid = left + (right - left) / 2;
+            if(nums[mid]==target){
+                return true;
+            }else if (nums[mid] > target) {
+                right = mid - 1;
+            }else {
+                left = mid + 1;
             }
-            index = (left + right) / 2;
         }
-        return -1;
+        return false;
     }
 }

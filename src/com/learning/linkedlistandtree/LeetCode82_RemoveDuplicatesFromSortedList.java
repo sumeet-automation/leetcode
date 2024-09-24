@@ -1,11 +1,6 @@
-package com.learning.linkedlist;
+package com.learning.linkedlistandtree;
 
-import com.learning.linkedlist.predefine.ListNode;
-import com.learning.linkedlist.predefine.TreeNode;
-
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import com.learning.linkedlistandtree.predefine.ListNode;
 
 public class LeetCode82_RemoveDuplicatesFromSortedList {
 
