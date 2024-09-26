@@ -11,6 +11,7 @@ public class LeetCode14_LongestCommonPrefix {
         String prefix = strs[0];
         for (int j = 1; j < strs.length; j++) {
             String word = strs[j];
+            //while (word.startsWith(prefix)){
             while (word.indexOf(prefix) != 0){
                     prefix = prefix.substring(0, prefix.length() - 1);
                     if(prefix.isEmpty()) return "";
