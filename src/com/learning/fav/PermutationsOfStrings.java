@@ -7,7 +7,7 @@ public class PermutationsOfStrings {
 
     public static void main(String[] args) {
         findPerm("abcd");
-        findComb("abcd");
+        findComb("aavcc");
     }
 
     public static void findComb(String input) {
@@ -22,6 +22,7 @@ public class PermutationsOfStrings {
     }
 
     private static void perm(String input, String perm, List<String> list) {
+        if(isPalindromic(perm))
         list.add(perm);
         for (int i = 0; i < input.length(); i++) {
             String temp = input.substring(0, i) + input.substring(i + 1);
@@ -33,7 +34,7 @@ public class PermutationsOfStrings {
         if(isPalindromic(perm))
             list.add(perm);
         for (int i = 0; i < input.length(); i++) {
-            String temp = input.substring(i + 1);
+            String temp =  input.substring(0, i)+input.substring(i + 1);
             combine(temp, perm + input.charAt(i), list);
         }
     }

@@ -1,9 +1,9 @@
 package com.learning.array;
 
-public class LeeCode2287_RearrangeCharactersMakeTargetString {
+public class LeetCode2287_RearrangeCharactersMakeTargetString {
 
     public static void main(String[] args) {
-        LeeCode2287_RearrangeCharactersMakeTargetString solution = new LeeCode2287_RearrangeCharactersMakeTargetString();
+        LeetCode2287_RearrangeCharactersMakeTargetString solution = new LeetCode2287_RearrangeCharactersMakeTargetString();
         System.out.println(solution.rearrangeCharacters("abcab", "abc"));
         System.out.println(solution.rearrangeCharacters("ilovecodingonleetcode", "code"));
         System.out.println(solution.rearrangeCharacters("abbaccaddaeea", "aaaaaaaa"));
