@@ -1,8 +1,6 @@
 package com.learning.strings;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class LeetCode2553_SeparateTheDigitsInAnArray {
 
@@ -24,4 +22,6 @@ public class LeetCode2553_SeparateTheDigitsInAnArray {
         }
         return res;
     }
+
+
 }

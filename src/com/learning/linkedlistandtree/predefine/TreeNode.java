@@ -1,21 +1,20 @@
 package com.learning.linkedlistandtree.predefine;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class TreeNode {
     public int val;
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    public TreeNode(int val, TreeNode left, TreeNode right) {
         this.val = val;
         this.left = left;
         this.right = right;
@@ -35,6 +34,21 @@ public class TreeNode {
         // Traverse right subtree
         inorderTraversal(node.right);
     }
+    public static void inorderTraversalIterative(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        while (node != null || !stack.isEmpty()) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            res.add(node.val);
+            node = node.right;
+        }
+        System.out.println(res);
+    }
 
     public static void preorderTraversal(TreeNode node) {
         if (node == null) {
@@ -49,6 +63,22 @@ public class TreeNode {
 
         // Traverse right subtree
         preorderTraversal(node.right);
+    }
+
+    public static void preorderTraversalIterative(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            System.out.print(node.val + " ");
+            if (node.right != null) stack.push(node.right);
+            if (node.left != null) stack.push(node.left);
+        }
+        System.out.println("over");
     }
 
     public static void postorderTraversal(TreeNode node) {
@@ -102,14 +132,16 @@ public class TreeNode {
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
-        System.out.print("Pre-order Traversal: ");
-        preorderTraversal(root);
+        /*System.out.print("Pre-order Traversal: ");
+        preorderTraversal(root);*/
         System.out.print("In-order Traversal: ");
         inorderTraversal(root);
-        System.out.print("Post-order Traversal: ");
+        /*System.out.print("Post-order Traversal: ");
         postorderTraversal(root);
         System.out.print("Level-order Traversal: ");
-        levelOrderTraverse(root);
+        levelOrderTraverse(root);*/
+        System.out.println("*".repeat(50));
+        inorderTraversalIterative(root);
     }
 
     public static TreeNode createBasicTreeNode() {
@@ -162,10 +194,6 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return "TreeNode{" +
-                "root=" + val +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
+        return "TreeNode{" + "root=" + val + ", left=" + left + ", right=" + right + '}';
     }
 }
